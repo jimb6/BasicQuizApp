@@ -1,0 +1,35 @@
+<div id="container">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-title class="ion-text-uppercase">Animal quiz</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <circle-progress
+          [title]="timer >= 0 ?timer / 20 + '' : '0'"
+          [percent]="timer"
+          [showUnits]="false"
+          [maxPercent]="1000"
+          [clockwise]="false"
+          [startFromZero]="false"
+          [showSubtitle]="false"
+          [animation]="true"
+          [animationDuration]="100"
+          [outerStrokeGradient]="true"
+          [outerStrokeWidth]="10"
+          outerStrokeColor="#4882c2"
+          outerStrokeGradientStopColor="#53a9ff"
+          innerStrokeColor="#e7e8ea"
+          innerStrokeWidth="10"
+        ></circle-progress>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-title class="ion-text-uppercase">starting...</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

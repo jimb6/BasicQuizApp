@@ -2,5 +2,6 @@
 	"appId": "io.ionic.starter",
 	"appName": "BasicQuizApp",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+  "windowsAndroidStudioPath": "C:\\Users\\RSY-JIM\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\211.7628.21.2111.8193401\\bin\\studio64.exe"
 }

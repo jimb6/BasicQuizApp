@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Quiz Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-icon slot="start" name="alarm-outline"></ion-icon>
+        <ion-text slot="end">{{ timer }}</ion-text>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-no-padding">
+      <ion-card>
+        <ion-card-content class="ion-text-center">
+          <ion-text>{{ question }}</ion-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-padding">
+    <ion-col>
+      <ion-card button="true" *ngFor="let choice of choices">
+        <ion-card-content (click)="checkAnswer(choice)" class="ion-text-center">
+          <ion-text>{{ choice }}</ion-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="nextQuestion()">
+        <ion-icon slot="end" name="caret-forward-outline"></ion-icon>
+        Next
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
